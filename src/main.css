@@ -37,11 +37,11 @@
 }
 
 /* Rotate the icons back */
+/* wrapper_hqZPsU = per-icon pivot hosting svg + avatar img + pinned badges — one rotation covers all children; badge +90 removed (was double-rotating) */
+.wrapper_hqZPsU,
 .wrapper_JJ-hgR,
 .folderPreview_RTMSuZ,
-.folderIconWrapper_RTMSuZ,
-.lowerBadge_hqZPsU,
-.upperBadge_hqZPsU {
+.folderIconWrapper_RTMSuZ {
 	rotate: 90deg;
 }
 .childWrapper_JJ-hgR {
