@@ -1,4 +1,5 @@
 :root {
+	--notices-height: 36px;
 	--serverlist-offset: var(--custom-guild-list-width);
 }
 
@@ -24,7 +25,6 @@
 	position: absolute !important;
 	left: 0;
 
-	.scroller_5dqHTG,
 	.stack_TWWX0S {
 		flex-direction: var(--HSL-server-direction);
 		justify-content: var(--HSL-server-alignment);
@@ -37,8 +37,8 @@
 }
 
 /* Rotate the icons back */
-.wrapper_hqZPsU,
-.folderPreviewWrapper_RTMSuZ,
+.wrapper_JJ-hgR,
+.folderPreview_RTMSuZ,
 .folderIconWrapper_RTMSuZ,
 .lowerBadge_hqZPsU,
 .upperBadge_hqZPsU {
@@ -48,7 +48,29 @@
 	rotate: 0deg;
 }
 
-/* shortcut: Discord removed global notices bar classes (2026-11 rehash; rule + --notices-height delete) — re-add height/offset rules if notices return */
+/* Notices */
+[class^='notice_'] {
+	height: var(--notices-height);
+
+	& + .content_pog62O {
+		--serverlist-offset: calc(var(--notices-height) + var(--custom-guild-list-width));
+	}
+}
 
 /* BetterFolders - Vencord */
-/* shortcut: Discord's 2026-11 rehash invalidated this block (.container__5e434 gone, user has plugin disabled); verify plugin DOM before restoring */
+.container_pog62O > div[style]:not(.base_pog62O) {
+	width: 100vw !important;
+	height: var(--serverlist-offset) !important;
+	position: absolute;
+	top: calc(var(--serverlist-offset) + var(--custom-app-top-bar-height));
+	pointer-events: none;
+	z-index: 1;
+
+	.guilds_pog62O {
+		pointer-events: all;
+	}
+
+	& + .base_pog62O .content_pog62O {
+		margin-top: calc(var(--serverlist-offset) * 2);
+	}
+}
