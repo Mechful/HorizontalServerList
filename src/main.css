@@ -37,10 +37,8 @@
 }
 
 /* Rotate the icons back */
-/* shortcut: blob-era rail items nest .wrapper_hqZPsU recursively (each svg>foreignObject frame adds a level) — rotating every match compounds +90 per level and lands upside down; rotate outermost only, inner frames inherit the corrected context */
-.guilds_pog62O .wrapper_hqZPsU:not(.wrapper_hqZPsU *),
-.folderPreview_RTMSuZ,
-.folderIconWrapper_RTMSuZ {
+/* shortcut: blob-era rail items nest .wrapper_hqZPsU recursively (each svg>foreignObject frame adds a level) — rotating every match compounds +90 per level and lands upside down; rotate outermost only, inner frames inherit the corrected context; folder tiles are separate classes and live inside an already-rotated frame so they need no +90 */
+.guilds_pog62O .wrapper_hqZPsU:not(.wrapper_hqZPsU *) {
 	rotate: 90deg;
 }
 .childWrapper_JJ-hgR {
