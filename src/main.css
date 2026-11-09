@@ -37,9 +37,8 @@
 }
 
 /* Rotate the icons back */
-/* wrapper_hqZPsU = per-icon pivot hosting svg + avatar img + pinned badges — one rotation covers all children; badge +90 removed (was double-rotating) */
-.wrapper_hqZPsU,
-.wrapper_JJ-hgR,
+/* shortcut: blob-era rail items nest .wrapper_hqZPsU recursively (each svg>foreignObject frame adds a level) — rotating every match compounds +90 per level and lands upside down; rotate outermost only, inner frames inherit the corrected context */
+.guilds_pog62O .wrapper_hqZPsU:not(.wrapper_hqZPsU *),
 .folderPreview_RTMSuZ,
 .folderIconWrapper_RTMSuZ {
 	rotate: 90deg;
