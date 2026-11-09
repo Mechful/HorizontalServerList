@@ -9,16 +9,4 @@
 }
 
 /* BetterFolders - Vencord */
-.base__5e434 > div[style]:not(.base__5e434) {
-	bottom: calc(var(--custom-guild-list-width) * 2);
-	top: unset;
-
-	.guilds__5e434 {
-		top: calc(100% + var(--custom-guild-list-width) * 2) !important;
-	}
-
-	& + .base__5e434 .content__5e434 {
-		margin-top: unset;
-		margin-bottom: calc(var(--custom-guild-list-width) * 2);
-	}
-}
+/* shortcut: Discord's 2026-11 rehash invalidated this block (user has plugin disabled); verify plugin DOM before restoring */

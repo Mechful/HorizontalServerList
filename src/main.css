@@ -59,19 +59,4 @@
 }
 
 /* BetterFolders - Vencord */
-.container__5e434 > div[style]:not(.base__5e434) {
-	width: 100vw !important;
-	height: var(--serverlist-offset) !important;
-	position: absolute;
-	top: calc(var(--serverlist-offset) + var(--custom-app-top-bar-height));
-	pointer-events: none;
-	z-index: 1;
-
-	.guilds__5e434 {
-		pointer-events: all;
-	}
-
-	& + .base__5e434 .content__5e434 {
-		margin-top: calc(var(--serverlist-offset) * 2);
-	}
-}
+/* shortcut: Discord's 2026-11 rehash invalidated this block (.container__5e434 gone, user has plugin disabled); verify plugin DOM before restoring */
