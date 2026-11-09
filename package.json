@@ -3,7 +3,8 @@
 	"type": "module",
 	"scripts": {
 		"dev": "bun --bun bd-css dev",
-		"build": "bun --bun bd-css build"
+		"build": "bun --bun bd-css build",
+		"test": "bun scripts/check-selectors.mjs"
 	},
 	"dependencies": {
 		"bd-css": "^0.0.6"
